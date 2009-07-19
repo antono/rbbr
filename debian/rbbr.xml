@@ -1,0 +1,88 @@
+<!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook V4.1//EN"
+	"http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd"
+	[
+	<!ENTITY address "<email>daf@muse.19inch.net</email>">
+	]>
+<refentry>
+<refentryinfo>
+	<author>
+		<firstname>Dafydd</firstname>
+		<surname>Harries</surname>
+	</author>
+	<address>&address;</address>
+	<copyright>
+		<year>2004</year>
+		<holder>Dafydd Harries</holder>
+	</copyright>
+	<date>Mar 28, 2004</date>
+</refentryinfo>
+<refmeta>
+	<refentrytitle>rbbr</refentrytitle>
+	<manvolnum>1</manvolnum>
+</refmeta>
+<refnamediv>
+	<refname>rbbr</refname>
+	<refpurpose>browse Ruby classes and documentation</refpurpose>
+</refnamediv>
+<refsynopsisdiv>
+	<cmdsynopsis>
+	<command>rbbr</command>
+	<arg choice="opt">--load-modules=<!--
+		--><replaceable>module</replaceable>,...</arg>
+	</cmdsynopsis>
+</refsynopsisdiv>
+<refsect1>
+	<title>DESCRIPTION</title>
+
+	<para>
+	This manual page documents briefly the <command>rbbr</command>
+	command. This manual page was written for the Debian GNU/Linux
+	distribution because the original program does not have a manual page.
+	</para>
+
+	<para>
+	Rbbr (RuBy BRowser) is an application to browse Ruby's hierarchy of
+	modules and classes and their constants and methods.
+	</para>
+</refsect1>
+<refsect1>
+	<title>OPTIONS</title>
+
+	<variablelist>
+	<varlistentry>
+		<term><option>--help</option></term>
+		<listitem>
+		<para>
+		Show a help text and exit.
+		</para>
+		</listitem>
+	</varlistentry>
+	<varlistentry>
+		<term><option>--load-modules</option></term>
+		<listitem>
+		<para>
+		Specifies dynamic modules to load.
+		</para>
+		</listitem>
+	</varlistentry>
+	</variablelist>
+</refsect1>
+<refsect1>
+	<title>SEE ALSO</title>
+
+	<para>
+	<citerefentry>
+		<refentrytitle>ri</refentrytitle>
+		<manvolnum>1</manvolnum>
+	</citerefentry>
+	</para>
+</refsect1>
+<refsect1>
+	<title>AUTHOR</title>
+
+	<para>
+	This manual page was written by Dafydd Harries (&address;) for the
+	Debian GNU/Linux system (but may be used by others).
+	</para>
+</refsect1>
+</refentry>

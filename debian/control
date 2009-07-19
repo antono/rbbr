@@ -1,0 +1,14 @@
+Source: rbbr
+Build-Depends-Indep: ruby, debhelper (>= 4), docbook-to-man, libgettext-ruby-util
+Section: devel
+Priority: extra
+Maintainer: Dafydd Harries <daf@debian.org>
+Standards-Version: 3.6.2
+
+Package: rbbr
+Architecture: all
+Depends: ruby1.8, libgettext-ruby1.8 (>= 0.5.2), libgtk2-ruby (>= 0.9.1)
+Recommends: ri
+Description: a browser for Ruby classes and documentation
+ Rbbr is an application for browsing Ruby's hierarchy of classes and modules
+ and viewing their constants, methods and documentation.

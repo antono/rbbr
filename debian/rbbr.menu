@@ -1,0 +1,6 @@
+?package(rbbr):\
+	needs="x11"\
+	section="Apps/Programming"\
+	title="Ruby Browser"\
+	command="/usr/bin/rbbr"\
+	icon="/usr/share/rbbr/icon.xpm"

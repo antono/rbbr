@@ -1,0 +1,54 @@
+#!/usr/bin/make -f
+
+config     = $(shell ruby -rrbconfig -e 'puts Config::CONFIG["$(1)"]')
+site_ruby := $(call config,rubylibdir)
+ruby      := $(call config,ruby_install_name)
+
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f *-stamp config.save lib/rbbr/config.rb InstalledFiles
+	test ! -d data/locale || find data/locale -type f -exec rm -f '{}' ';'
+	dh_clean debian/rbbr.1
+
+build-stamp:
+	dh_testdir
+	ruby install.rb config --prefix=/usr --site-ruby=$(site_ruby)
+	ruby install.rb setup
+	touch build-stamp
+
+build: build-stamp
+
+debian/rbbr.1: debian/rbbr.xml
+	docbook-to-man $< > $@
+
+install: build debian/rbbr.1
+	dh_testdir
+	dh_testroot
+	ruby install.rb install --prefix=debian/rbbr
+	sed -i -e '1s,.*,#!/usr/bin/$(ruby),' debian/rbbr/usr/bin/rbbr
+
+	install -d $(CURDIR)/debian/rbbr/usr/share/applications
+	install -m 0644 debian/rbbr.desktop \
+		$(CURDIR)/debian/rbbr/usr/share/applications
+
+binary-indep: install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs ChangeLog
+	dh_installdocs README README.ja
+	dh_installmenu
+	dh_installman debian/rbbr.1
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_md5sums
+	dh_gencontrol
+	dh_builddeb
+
+binary-arch: install
+
+binary: binary-indep binary-arch
+
+.PHONY: clean build install binary-indep binary-arch binary
+

@@ -1,0 +1,55 @@
+rbbr (0.6.0-3ubuntu1) karmic; urgency=low
+
+  * Test build
+
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Sun, 19 Jul 2009 10:35:29 +0300
+
+rbbr (0.6.0-3) unstable; urgency=low
+
+  * Take .desktop file from Ubuntu, but make it use the existing .png file
+    rather than a copy of the .xpm file. Closes: #347963.
+  * Update standards version to 3.6.2; no changes.
+  * Update my email address.
+  * Build-depend on libgettext-ruby-util so that MO files get built.
+  * Make the build fail if MO files cannot be built.
+
+ -- Dafydd Harries <daf@debian.org>  Wed, 29 Mar 2006 18:06:45 +0100
+
+rbbr (0.6.0-2) unstable; urgency=low
+
+  * Thanks to Gustavo Noronha Silva for his review.
+  * Change section to "devel".
+  * Depend on ruby1.8 rather than ruby.
+  * This package is getting sponsored. (Closes: #240761.)
+
+ -- Dafydd Harries <daf@muse.19inch.net>  Sat,  3 Jul 2004 23:44:22 +0100
+
+rbbr (0.6.0-1) unstable; urgency=low
+
+  * New upstream version.
+  * The dependency on libgtk2-ruby now needs to be versioned (>= 0.9.1).
+  * Add a manpage, written in DocBook.
+  * Add a menu file, and an XPM icon to go with it.
+
+ -- Dafydd Harries <daf@muse.19inch.net>  Mon, 29 Mar 2004 00:53:05 +0100
+
+rbbr (0.5.1-2) unstable; urgency=low
+
+  * Replace Build-Depends with Build-Depends-Indep.
+
+ -- Dafydd Harries <daf@muse.19inch.net>  Tue, 24 Feb 2004 13:23:30 +0000
+
+rbbr (0.5.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * New email address.
+  * debian/control: add Depends: libgettext-ruby1.8
+  * debian/rules: install: Fix #! line in /usr/bin/rbbr.
+
+ -- Dafydd Harries <daf@muse.19inch.net>  Tue, 24 Feb 2004 13:12:56 +0000
+
+rbbr (0.4.0-1) unstable; urgency=low
+
+  * Initial Debianification.
+
+ -- Dafydd Harries <daf@parnassus.ath.cx>  Sat, 15 Nov 2003 14:50:43 +0000
