@@ -1,8 +1,9 @@
-rbbr (0.6.0-3ubuntu1) karmic; urgency=low
+rbbr (0.6.0-uor0) jaunty; urgency=low
 
-  * Test build
+  * Fixed crasher in browselist.rb
+  * Rebuilded for Ubuntu on Rails PPA
 
- -- Antono Vasiljev <antono.vasiljev@gmail.com>  Sun, 19 Jul 2009 10:35:29 +0300
+ -- Antono Vasiljev <antono.vasiljev@gmail.com>  Sun, 19 Jul 2009 11:21:59 +0300
 
 rbbr (0.6.0-3) unstable; urgency=low
 
