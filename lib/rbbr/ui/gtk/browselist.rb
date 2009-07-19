@@ -47,7 +47,7 @@ module GTK
       end
 
       signal_connect("cursor-changed") do
-	data = selection.selected.path.to_str
+	data = selection.selected.path.to_str if selection.selected
 	if @first
 	  @first = false
 	  save_memento(nil)
