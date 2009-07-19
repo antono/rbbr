@@ -36,7 +36,7 @@ binary-indep: install
 	dh_testdir
 	dh_testroot
 	dh_installchangelogs ChangeLog
-	dh_installdocs README README.ja
+	dh_installdocs README
 	dh_installmenu
 	dh_installman debian/rbbr.1
 	dh_compress
